@@ -23,13 +23,16 @@ void Split(const string& subject, vector<string>& container)
 
 int main() {
     //Insert all Food products present in the store
-    foodSet.insert("choclate");
+    foodSet.insert("chocolate");
     foodSet.insert("bar");
-    foodSet.insert("choclates");
+    foodSet.insert("chocolates");
 
+    //Insert all books present in the store
     books.insert("book");
 
-    medicalProducts.insert("headache pills");
+    //Insert all medicine products present in the store
+    medicalProducts.insert("headache");
+    medicalProducts.insert("pills");
 
     vector<string> inputStrings;
     // map<string, unordered_set<string>> map ;
@@ -112,7 +115,6 @@ int main() {
         if(saletaxPercent>0){
             float tax = (totalPrice*saletaxPercent)/100;
             float roundOfftax = (int)(tax * 100 + .5);
-            // int roundOfftax =(int)(tax*100);
             float expectedTax = (int)roundOfftax%5;
             if(expectedTax>=3) {
                 roundOfftax = roundOfftax+(5-expectedTax);
